@@ -1,0 +1,133 @@
+/* Root styles */
+:root {
+  --text: #fff;
+  --background-color: #161616;
+  --font: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 10rem;
+  font-weight: 900;
+}
+
+p,
+a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition-duration: 0.3s;
+  padding: 10px;
+  border: solid 0px transparent;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+button {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #bcbdc0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  transition-duration: 0.3s;
+  display: inline-block;
+}
+
+
+button:hover {
+  box-shadow: 0 0.5em 0.5em -0.5em rgb(0, 214, 83);
+  transform: translate(0, -0.2em);
+  transition-timing-function: cubic-bezier(0.77,0,0.18,1);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+a:hover {
+  transform: translate(0, -0.2em);
+  transition-timing-function: cubic-bezier(0.77,0,0.18,1);
+  border-radius: 1rem;
+}
+
+body {
+  background-color: var(--background-color);
+  background-image:
+    radial-gradient(circle at 0% 25%, rgba(0, 214, 83, 0.2) 0%, transparent 20%),
+    radial-gradient(circle at -10% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 45%);
+  font-family: var(--font);
+  color: var(--text);
+}
+
+
+nav {
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  top: 0;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 6rem;
+  font-size: 17px;
+  left: 50%;
+  gap:  2rem;
+  transform: translateX(-50%);
+  justify-content: center; /* Changed to add space between items */
+  transition: opacity 0.3s ease-out;
+}
+
+.nav-hidden {
+  opacity: 0; /* Class to hide the nav */
+}
+
+
+.nav-items {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  border: solid 1px #3d3d3d;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transform: scale(0.8);
+
+}
+
+#logo {
+  font-weight: 800;
+  font-size: 50px;
+  position: sticky;
+  transition: color;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#heading {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  line-height: 60%;
+}
+
+#heading-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+
+#heading-name {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+#heading-bottom {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#heading-logo {
+  color: rgb(0, 214, 83);
+  filter: drop-shadow(#00d65273 0px 0px 10px);
+}
